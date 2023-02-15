@@ -4,7 +4,7 @@
     padding-bottom: 20px;
 }
 body {
-    background-image: url("./../imgs/bg.png");
+    background-image: url("./../img/bg.png");
 }
 .custom-control [type="radio"]:checked+label, input.tgl-radio-tab-child+label {
     padding: clamp(0.625rem, calc(0.4375rem + 1vw), 1.25rem);

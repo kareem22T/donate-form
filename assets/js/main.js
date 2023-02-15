@@ -1,4 +1,5 @@
-$(function () { // switch between two donates methods
+$(function () { 
+    // switch between two donates methods
     $('#the_donta').trigger('click')
     $('#the_donta').on('click', function() {
         $('#donate-form').css('opacity', 0)
@@ -14,7 +15,58 @@ $(function () { // switch between two donates methods
             $('#donate-form').css('opacity', 1)
         }, 600);
     })
+
+    // switch cart methods 
+    $('.banks label').on('click', function () {
+        $(this).addClass('active')
+        $('.banks label').not(this).removeClass('active')
+
+        if ($("input:radio").attr('checked', true)) {
+            $(this).siblings('label').addClass('active')
+        }
+    })
+
+    $('.switch-btns a').on('click', function (e) {
+        e.preventDefault();
+        $(this).addClass('active')
+        $(this).siblings().removeClass('active')
+        $('.donates').css('opacity', 0)
+        setTimeout(() => {
+            if ($(this).hasClass('egy')) {
+                $('.donates thead tr th:last-child').text('قيمة التبرع بالجنيه ')
+            } else {
+                $('.donates thead tr th:last-child').text('قيمة التبرع بالدولار ')
+            }
+        }, 350);
+        setTimeout(() => {
+            $('.donates').css('opacity', 1)
+        }, 500);
+    })
+
 })
+function validateBank() { // validate cart
+    let bank = document.forms["cart_form"]["bank"].value;
+    if (bank == "") {
+        $(function () {
+            $('#validation-msgs').append('<div class="alert alert-danger">عفوا البنك مطلوب</div>')
+        })
+
+        document.getElementById('validation-msgs').style.opacity = 1
+
+        setTimeout(() => {
+            document.getElementById('validation-msgs').style.opacity = 0
+        }, 2000);
+
+        setTimeout(() => {
+            $(function () {
+                $('#validation-msgs').children().remove()
+            })
+        }, 2500);
+
+        return false
+    }
+
+}
 
 // validation form
 function validateForm() {

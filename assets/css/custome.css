@@ -1,0 +1,215 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  background-image: url("./../img/bg.png"); }
+
+html {
+  scroll-behavior: smooth; }
+
+.container .cart form .total .banks, .danger-msg {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.container {
+  width: 1300px;
+  padding: 0 25px;
+  margin: auto; }
+@media (max-width: 1300px) {
+  .container {
+    width: 100%;
+    margin: auto; } }
+@media (max-width: 549.98px) {
+  .container {
+    max-width: 440px;
+    margin: auto;
+    padding: 0 15px; } }
+
+.container h1 {
+  color: #27318b;
+  margin: 0;
+  font-size: clamp(1.6875rem, calc(1.1156rem + 2.4731vw), 3.125rem);
+  text-align: center;
+  margin-bottom: 30px; }
+.container .cart form .switch-btns {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0; }
+.container .cart form .switch-btns a {
+  text-decoration: none;
+  padding: clamp(0.625rem, calc(0.4375rem + 1vw), 1.25rem);
+  width: 100%;
+  background-color: #f5f8ff;
+  color: #6b6e75;
+  border: none;
+  box-shadow: none;
+  border-radius: 0%;
+  text-align: center;
+  border-bottom: 3px solid #f5f8ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(0.3125rem, calc(0.2188rem + 0.5vw), 0.625rem);
+  font-size: clamp(0.8125rem, calc(0.7188rem + 0.5vw), 1.125rem);
+  line-height: clamp(1.25rem, calc(1.0625rem + 1vw), 1.875rem);
+  transition: all .3s ease-out; }
+.container .cart form .switch-btns a:hover, .container .cart form .switch-btns a.active {
+  border-bottom: 3px solid #27318b;
+  color: #27318b; }
+.container .cart form .donates, .container .cart form .total {
+  transition: opacity .4s ease-out;
+  grid-column: span 1;
+  border: none !important; }
+.container .cart form .donates thead, .container .cart form .total thead {
+  text-align: right; }
+.container .cart form .donates tr, .container .cart form .donates td, .container .cart form .donates th, .container .cart form .total tr, .container .cart form .total td, .container .cart form .total th {
+  background-color: #ffffff00 !important;
+  border: none;
+  text-align: right;
+  padding: 5px clamp(0rem, calc(-0.373rem + 1.6129vw), 0.9375rem); }
+.container .cart form .donates tr i, .container .cart form .total tr i {
+  font-size: clamp(0.875rem, calc(0.7258rem + 0.6452vw), 1.25rem);
+  color: #c62727;
+  padding: clamp(0.4375rem, calc(0.3629rem + 0.3226vw), 0.625rem);
+  border: 2px solid #c62727;
+  border-radius: 10px;
+  transition: all .3s ease-out; }
+.container .cart form .donates tr i:hover, .container .cart form .total tr i:hover {
+  background-color: #c62727;
+  color: white; }
+.container .cart form .donates tr .img, .container .cart form .total tr .img {
+  width: clamp(3.75rem, calc(3.004rem + 3.2258vw), 5.625rem);
+  height: clamp(3.75rem, calc(3.004rem + 3.2258vw), 5.625rem);
+  overflow: hidden;
+  border: 2px solid transparent;
+  outline: 1px solid rgba(204, 204, 204, 0.597);
+  margin: 10px 15px;
+  border-radius: 50%;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; }
+.container .cart form .donates tr .img img, .container .cart form .total tr .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; }
+.container .cart form .donates th, .container .cart form .total th {
+  font-size: clamp(0.9rem, calc(0.6613rem + 1.0323vw), 1.5rem); }
+.container .cart form .donates td, .container .cart form .total td {
+  font-size: clamp(0.8rem, calc(0.6011rem + 0.8602vw), 1.3rem);
+  border-bottom: 1px solid #e0e0e0;
+  border-top: 1px solid #e0e0e0; }
+.container .cart form .donates input, .container .cart form .total input {
+  background-color: transparent;
+  border: none;
+  max-width: clamp(5.625rem, calc(4.3817rem + 5.3763vw), 8.75rem);
+  padding: 0;
+  border-radius: 0%;
+  border-radius: 13px;
+  font-weight: 600; }
+.container .cart form .donates input[type=number], .container .cart form .total input[type=number] {
+  border: 1px solid #e0e0e0;
+  text-align: center;
+  font-weight: bold;
+  color: #27318b;
+  transform: translateX(calc(-50% + 30px)); }
+.container .cart form .donates .number input, .container .cart form .total .number input {
+  padding: 10px;
+  width: clamp(4.375rem, calc(3.1317rem + 5.3763vw), 7.5rem); }
+.container .cart form .donates {
+  margin: 0; }
+.container .cart form .donates tfoot a {
+  width: 100%;
+  display: block;
+  padding: 2px;
+  text-align: center;
+  text-decoration: none;
+  border: 2px solid #27318b;
+  border-radius: 15px;
+  color: #27318b;
+  font-size: clamp(1.0625rem, calc(0.8138rem + 1.0753vw), 1.6875rem);
+  margin: 10px 0;
+  transition: all .3s ease-out; }
+.container .cart form .donates tfoot a:hover {
+  background-color: #27318b;
+  color: #fff; }
+.container .cart form .total {
+  grid-column: span 1;
+  border-radius: 20px;
+  overflow: hidden; }
+.container .cart form .total th, .container .cart form .total tr, .container .cart form .total td {
+  background-color: transparent;
+  padding: 0 clamp(1.25rem, calc(0.7527rem + 2.1505vw), 2.5rem); }
+.container .cart form .total tr {
+  border: none !important; }
+.container .cart form .total th {
+  text-align: center;
+  font-size: clamp(1rem, calc(0.7513rem + 1.0753vw), 1.625rem); }
+.container .cart form .total thead, .container .cart form .total tbody {
+  background-color: #00000011; }
+.container .cart form .total thead td, .container .cart form .total tbody td {
+  font-weight: 600; }
+.container .cart form .total thead td:last-child, .container .cart form .total tbody td:last-child {
+  text-align: left; }
+.container .cart form .total tfoot {
+  background-color: #00000011;
+  font-weight: bold;
+  white-space: nowrap; }
+.container .cart form .total tfoot td {
+  border: none; }
+.container .cart form .total tfoot td:last-child {
+  text-align: left; }
+.container .cart form .total tfoot th, .container .cart form .total tfoot tr, .container .cart form .total tfoot td {
+  padding: 10px clamp(1.25rem, calc(0.7527rem + 2.1505vw), 2.5rem);
+  border: none !important;
+  font-size: clamp(1rem, calc(0.7513rem + 1.0753vw), 1.625rem); }
+.container .cart form .total tfoot th input, .container .cart form .total tfoot tr input, .container .cart form .total tfoot td input {
+  font-weight: bold;
+  color: #c62727; }
+.container .cart form .total tfoot button {
+  width: 100%;
+  border-radius: 15px;
+  font-weight: bold;
+  padding: 10px;
+  background-color: #27318b;
+  border: none; }
+.container .cart form .total tfoot button:hover {
+  background-color: #3b46a4; }
+.container .cart form .total .banks {
+  justify-content: end;
+  gap: clamp(0.3125rem, calc(0.0638rem + 1.0753vw), 0.9375rem);
+  margin: 15px 0; }
+.container .cart form .total .banks span {
+  position: relative;
+  width: clamp(2.5rem, calc(2.2513rem + 1.0753vw), 3.125rem);
+  height: clamp(2.5rem, calc(2.2513rem + 1.0753vw), 3.125rem); }
+.container .cart form .total .banks label {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+  top: 0;
+  right: 0;
+  background-color: #fff;
+  padding: 5px;
+  cursor: pointer; }
+.container .cart form .total .banks label.active {
+  border: 2px solid #27318b; }
+.container .cart form .total .banks label img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center; }
+
+.success-msg i, .danger-msg i {
+  font-size: clamp(3.125rem, calc(2.1304rem + 4.3011vw), 5.625rem); }
+.success-msg h1, .danger-msg h1 {
+  font-size: clamp(1.125rem, calc(0.5282rem + 2.5806vw), 2.625rem);
+  margin: 10px; }
+
+.danger-msg {
+  flex-direction: column;
+  gap: 15px; }
+
+/*# sourceMappingURL=custome.css.map */
