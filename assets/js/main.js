@@ -18,10 +18,7 @@ $(function () { // switch between two donates methods
 
 // validation form
 function validateForm() {
-    const validationContainer = ReactDOM.createRoot(
-        document.getElementById('validation-msgs')
-    );
-    let msgs = [];
+    let valid = true;
     let name = document.forms["donate-form"]["the_name"].value;
     let email = document.forms["donate-form"]["the_email"].value;
     let phone = document.forms["donate-form"]["the_phone"].value;
@@ -53,11 +50,12 @@ function validateForm() {
 
     for (let index = 0; index < form_content.length; index++) {
         if (form_content[index].input == "") {
-            msgs.push((<div className="alert alert-danger">{form_content[index].error_msg}</div>))
+            $(function () {
+                $('#validation-msgs').append('<div class="alert alert-danger">' + form_content[index].error_msg +'</div>')
+            })
+            valid = false
         }
     }
-
-    validationContainer.render(msgs)
 
     document.getElementById('validation-msgs').style.opacity = 1
 
@@ -71,8 +69,6 @@ function validateForm() {
         })
     }, 2500);
 
-    if (msgs.length > 0) {
-        return false;
-    }
+    return valid;
 
 }
