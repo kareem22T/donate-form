@@ -31,29 +31,29 @@ function validateForm() {
     let form_content = [
         {
             input: name,
-            error: "عفوا الاسم مطلوب"
+            error_msg: "عفوا الاسم مطلوب"
         },
         {
             input: email,
-            error: "عفوا البريد الالكتروني مطلوب"
+            error_msg: "عفوا البريد الالكتروني مطلوب"
         },
         {
             input: phone,
-            error: "عفوا رقم الهاتف مطلوب"
+            error_msg: "عفوا رقم الهاتف مطلوب"
         },
         {
             input: target,
-            error: "عفوا جهة التبرع مطلوبة"
+            error_msg: "عفوا جهة التبرع مطلوبة"
         },
         {
             input: price,
-            error: "عفوا قيمة التبرع مطلوبة"
+            error_msg: "عفوا قيمة التبرع مطلوبة"
         },
     ]
 
     for (let index = 0; index < form_content.length; index++) {
         if (form_content[index].input == "") {
-            msgs.push(<div className="alert alert-danger">{form_content[index].error}</div>)
+            msgs.push((<div className="alert alert-danger">{form_content[index].error_msg}</div>))
         }
     }
 
