@@ -126,17 +126,7 @@ button.btn.btn-primary.bahya-bg.w-100:hover {
     background: #ffffff6e;
 }
 
-header, footer {
-    height: 200px;
-    background-color: #9b9b9b;
-    text-align: center;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-header {margin-bottom: 50px;}
+header {margin-bottom: 65px;}
 footer {margin-top: 50px;}
 
 .form-row {

@@ -43,6 +43,25 @@ $(function () {
         }, 500);
     })
 
+    $('.more').on('click', function () {
+        $(this).find('ul').fadeToggle()
+    })
+    
+    $('.menu').on('click', function () {
+        $('header nav').removeClass('animate__animated animate__fadeOutRight')
+        $('header nav').addClass('animate__animated animate__fadeInRight')
+        $('header nav').css('display', 'flex')
+        $('header nav').fadeIn('fast')
+    })
+    $('.close').on('click', function () {
+        $('header nav').addClass('animate__animated animate__fadeOutRight')
+        $('header nav').fadeOut()
+        $('header nav').remove('animate__animated animate__fadeInRight')
+        setTimeout(() => {
+            $('header nav').removeClass('animate__animated animate__fadeOutRight')
+        }, 1000);
+    })
+
 })
 function validateBank() { // validate cart
     let bank = document.forms["cart_form"]["bank"].value;
