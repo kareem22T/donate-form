@@ -141,6 +141,7 @@ header nav ul {
   color: #fff;
   margin: 0;
   padding: 0;
+  white-space: nowrap;
 }
 header nav ul a {
   text-decoration: none;
@@ -176,7 +177,7 @@ header nav ul .more ul {
 }
 @media (max-width: 1199.98px) {
   header nav ul {
-    font-size: 18px;
+    font-size: 17px;
   }
   header nav ul li {
     padding: 12px 10px;

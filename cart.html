@@ -20,6 +20,38 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="./assets/css/header.css">
     <link rel="stylesheet" href="./assets/css/footer.css">
+    <style>
+        .donates td:not(.number), .donates th {
+            padding-right: 10px !important;
+        }
+
+        .donates th {
+            text-align: center !important;
+        }
+        .number >div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: clamp(0.625rem, calc(-0.4861rem + 4.4444vw), 3.125rem);
+        }
+        @media (max-width: 555px) {
+            .number >div {
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+
+            .number input {
+                transform: none !important;
+            }
+        }
+        .cart form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        /* .number a {transform: translateX(calc(-50% + 15px));} */
+    </style>
     <title>سلة التبرعات</title>
 </head>
 <body>
@@ -117,7 +149,7 @@
         <h1>سلة التبرعات</h1>
         <section class="cart" id="cart">
             <form action="" name="cart_form" onsubmit="return validateBank()">
-                <div class="switch-btns">
+                <div class="switch-btns w-100">
                     <a href="" class="active egy">
                         <i class='bx bx-pyramid'></i>
                         التبرع من داخل مصر بالجنيه
@@ -130,35 +162,40 @@
                 <table class="donates w-100">
                     <thead>
                         <tr>
-                            <th class="pr-2">ID</td>
-                            <th>
-                                </td>
-                            <th>جهة التبرع</td>
-                            <th colspan="2">قيمة التبرع بالجنيه</td>
+                            <th class="pr-2">رقم العملية</th>
+                            <th>اسم المتبرع</th>
+                            <th>رقم الهاتف</th>
+                            <th>جهة التبرع</th>
+                            <th colspan="2" style="padding-right: 0 !important;">قيمة التبرع بالجنيه</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td class="text-center">1</td>
-                            <td>
-                                <div class="img"><img src="./assets/img/olddonate.jpg" alt=""></div>
+                            <td class="text-center">
+                                1
                             </td>
+                            <td>كريم محمد</td>
+                            <td>012345689</td>
                             <td><input type="text" disabled value="رعاية مسنين"></td>
-                            <td class="number"><input type="number" name="donate_price" value="200" @change="setTotal()">
+                            <td class="number" style="padding-left: 10px !important;">
+                                <div>
+                                    <input type="number" name="donate_price" value="200" @change="setTotal()">
+                                    <a href="" @click.prevent class="remove-donate"><i class="fa-regular fa-trash-can"></i>
+                                    </a>
+                                </div>
                             </td>
-                            <td style="text-align: left; padding-left: 10px;"><a href="" @click.prevent
-                                    class="remove-donate"><i class="fa-regular fa-trash-can"></i></i></a></td>
                         </tr>
                         <tr>
                             <td class="text-center">2</td>
-                            <td>
-                                <div class="img"><img src="./assets/img/donate.png" alt=""></div>
-                            </td>
+                            <td>كريم محمد</td>
+                            <td>012345689</td>
                             <td><input type="text" disabled value="صدقة جارية"></td>
-                            <td class="number"><input type="number" name="donate_price" value="200" @change="setTotal()">
-                            </td>
-                            <td style="text-align: left; padding-left: 10px;"><a href="" @click.prevent
-                                    class="remove-donate"><i class="fa-regular fa-trash-can"></i></a>
+                            <td class="number" style="padding-left: 10px !important;">
+                                <div>
+                                    <input type="number" name="donate_price" value="200" @change="setTotal()">
+                                    <a href="" @click.prevent class="remove-donate"><i class="fa-regular fa-trash-can"></i>
+                                    </a>
+                                </div>
                             </td>
                         </tr>
                     </tbody>
