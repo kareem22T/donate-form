@@ -5,6 +5,7 @@ $(function () {
         $('#donate-form').css('opacity', 0)
         $('#visa-donate-now').attr('name', 'submit-egy')
         $('#donate-form input').val('')
+        $('#donate-form select').val('')
         setTimeout(() => {
             $('#donate-form').css('opacity', 1)
         }, 600);
@@ -13,6 +14,8 @@ $(function () {
         $('#donate-form').css('opacity', 0)
         $('#visa-donate-now').attr('name', 'submit-dollar')
         $('#donate-form input').val('')
+        $('#donate-form select').val('')
+
         setTimeout(() => {
             $('#donate-form').css('opacity', 1)
         }, 600);
