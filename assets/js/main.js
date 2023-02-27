@@ -4,6 +4,7 @@ $(function () {
     $('#the_donta').on('click', function() {
         $('#donate-form').css('opacity', 0)
         $('#visa-donate-now').attr('name', 'submit-egy')
+        $('#donate-form input').val('')
         setTimeout(() => {
             $('#donate-form').css('opacity', 1)
         }, 600);
@@ -11,6 +12,7 @@ $(function () {
     $('#the_donta1').on('click', function() {
         $('#donate-form').css('opacity', 0)
         $('#visa-donate-now').attr('name', 'submit-dollar')
+        $('#donate-form input').val('')
         setTimeout(() => {
             $('#donate-form').css('opacity', 1)
         }, 600);
