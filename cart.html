@@ -32,12 +32,10 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: clamp(0.625rem, calc(-0.4861rem + 4.4444vw), 3.125rem);
         }
         @media (max-width: 555px) {
             .number >div {
                 flex-wrap: wrap;
-                gap: 10px;
             }
 
             .number input {
@@ -179,7 +177,7 @@
                             <td><input type="text" disabled value="رعاية مسنين" class="text-center text-dark"></td>
                             <td class="number" style="padding-left: 10px !important;">
                                 <div>
-                                    <input type="number" name="donate_price" value="200" @change="setTotal()">
+                                    <input type="text" name="donate_price" value="200" @change="setTotal()" disabled>
                                     <a href="" @click.prevent class="remove-donate"><i class="fa-regular fa-trash-can"></i>
                                     </a>
                                 </div>
@@ -192,7 +190,7 @@
                             <td><input type="text" disabled value="صدقة جارية" class="text-center text-dark"></td>
                             <td class="number" style="padding-left: 10px !important;">
                                 <div>
-                                    <input type="number" name="donate_price" value="200" @change="setTotal()">
+                                    <input type="text" name="donate_price" value="200" @change="setTotal()" disabled>
                                     <a href="" @click.prevent class="remove-donate"><i class="fa-regular fa-trash-can"></i>
                                     </a>
                                 </div>
@@ -218,7 +216,7 @@
                         </tr>
                         <tr>
                             <td colspan="2" class="text-center">
-                                اختر البنك
+                                اختر طريقة الدفع
                                 <div class="banks">
                                     <span>
                                         <div class="form-check">
@@ -272,7 +270,7 @@
                         </tr>
                         <tr>
                             <td colspan="2" style="padding: 10px 15px">
-                                <button class="btn btn-primary" type="submit">تاكيد التبرع</button>
+                                <button class="btn btn-primary" type="submit">ادفع الان</button>
                             </td>
                         </tr>
                         </tr>
@@ -361,7 +359,7 @@
                     var tot = 0;
                     for (var i = 0; i < arr.length; i++) {
                         if (parseInt(arr[i].value))
-                            tot += parseInt(arr[i].value);
+                            tot += parseInt(Number(arr[i].value));
                     }
                     document.getElementById('total').value = tot
                 }

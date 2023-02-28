@@ -146,8 +146,11 @@ html {
                 }
                 .number {
                     input {
-                        padding: 10px;
+                        
                         width: clamp(4.375rem, calc(3.1317rem + 5.3763vw), 7.5rem);
+                        color: black;
+                        font-weight: 700;
+                        text-align: center;
                     }
                 }
             }
@@ -208,8 +211,8 @@ html {
                         border: none !important;
                         font-size: clamp(1rem, calc(0.7513rem + 1.0753vw), 1.625rem);
                         input {
-                            font-weight: bold;
-                            color: #c62727;
+                            font-weight: 700;
+                            color: #000000;
                         }
                     }
 

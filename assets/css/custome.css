@@ -138,8 +138,10 @@ html {
   transform: translateX(calc(-50% + 30px));
 }
 .container .cart form .donates .number input, .container .cart form .total .number input {
-  padding: 10px;
   width: clamp(4.375rem, calc(3.1317rem + 5.3763vw), 7.5rem);
+  color: black;
+  font-weight: 700;
+  text-align: center;
 }
 .container .cart form .donates {
   margin: 0;
@@ -205,8 +207,8 @@ html {
 }
 .container .cart form .total tfoot th input, .container .cart form .total tfoot tr input,
 .container .cart form .total tfoot td input {
-  font-weight: bold;
-  color: #c62727;
+  font-weight: 700;
+  color: #000000;
 }
 .container .cart form .total tfoot button {
   width: 100%;
