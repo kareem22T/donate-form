@@ -89,8 +89,6 @@ html {
 .container .cart form .donates tr i, .container .cart form .total tr i {
   font-size: clamp(0.875rem, calc(0.7258rem + 0.6452vw), 1.25rem);
   color: #c62727;
-  padding: clamp(0.4375rem, calc(0.3629rem + 0.3226vw), 0.625rem);
-  border: 2px solid #c62727;
   border-radius: 10px;
   transition: all .3s ease-out;
 }
