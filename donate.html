@@ -118,9 +118,27 @@
             <h4 class="bahya-color mb-3">تبرع اونلاين</h4>
             <form name="donate-form" id="donate-form" method="post" onsubmit="return validateForm()" class="needs-validation">
                 <input type="hidden" id="the_order_id" name="order_id" value="0">
+                <div class="chek-buttons w-100 mb-3">
+                    <h5 class="mb-2 text-center">مكان التبرع</h5>
+                    <div style="display: flex; justify-content: center; gap: 20px;">
+                        <div class="form-check">
+                            <label class="form-check-label" for="location1">
+                                داخل مصر
+                            </label>
+                            <input class="form-check-input" type="radio" name="location" id="location1" value="1" checked>
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label" for="location2">
+                                خارج مصر
+                            </label>
+                            <input class="form-check-input" type="radio" name="location" id="location2" value="2">
+                        </div>
+                    </div>
+                
+                </div>
 
                 <div class="form-row">
-                    <div class="col-md-12 mb-1 w-100">
+                    <div class="col-md-12  w-100">
                         
                         <div class="input-group">
                             <i class='bx bx-user'></i>
@@ -130,7 +148,7 @@
                 </div>
         
                 <div class="form-row">
-                    <div class="col-md-12 mb-1 w-100">
+                    <div class="col-md-12  w-100">
                         <label for="validationTooltip01"></label>
                         <div class="input-group">
                             <i class='bx bx-envelope'></i>
@@ -140,7 +158,7 @@
                 </div>
         
                 <div class="form-row">
-                    <div class="col-md-12 mb-1 w-100">
+                    <div class="col-md-12  w-100">
                         <label for="validationTooltip01"></label>
                         <div class="input-group">
                             <i class='bx bx-phone'></i>
@@ -150,7 +168,7 @@
                 </div>
         
                 <div class="form-row">
-                    <div class="col-md-12 mb-1 w-100">
+                    <div class="col-md-12  w-100">
                         <label for="validationTooltip01"></label>
                         <div class="input-group">
                             <i class='bx bx-wallet bg-white'></i>
@@ -183,29 +201,11 @@
                         <div class="input-group">
                             <i class='bx bx-money'></i>
                             <input type="number" name="price" placeholder="قيمة التبرع" class="form-control" aria-label="Text input with dropdown button" >
-                            <h6 class="currency" style="position: absolute; left: clamp(0.625rem, calc(-0.4861rem + 4.4444vw), 3.125rem); top: calc(50% + 5px); transform: translateY(-50%); z-index: 9999;">
+                            <h6 class="currency" style="position: absolute; left: clamp(0.625rem, calc(-0.4861rem + 4.4444vw), 3.125rem); top: calc(50%); transform: translateY(-50%); z-index: 9999;">
                                 بالجنيه
                             </h6>
                         </div>
                     </div>
-                </div>
-                <div class="chek-buttons w-100 mb-4">
-                    <h5 class="mb-2">مكان التبرع</h5>
-                    <div style="display: flex; justify-content: start; gap: 20px;">
-                        <div class="form-check">
-                            <label class="form-check-label" for="location1">
-                                داخل مصر
-                            </label>
-                            <input class="form-check-input" type="radio" name="location" id="location1" value="1" checked>
-                        </div>
-                        <div class="form-check">
-                            <label class="form-check-label" for="location2">
-                                خارج مصر
-                            </label>
-                            <input class="form-check-input" type="radio" name="location" id="location2" value="2">
-                        </div>
-                    </div>
-
                 </div>
 
                 <button class="btn btn-primary bahya-bg p-3 w-100 submitDonate" id="visa-donate-now" name="submit-egy"

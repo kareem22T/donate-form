@@ -96,7 +96,7 @@ button.btn.btn-primary.bahya-bg.w-100:hover {
     position: absolute;
     right: 10px;
     font-size: 28px;
-    top: calc(50% + 6px);
+    top: calc(50%);
     transform: translateY(-50%);
     z-index: 22222;
     color: #6b6e75c9;
@@ -155,4 +155,9 @@ select {
 #validation-msgs{
     opacity: 0;
     transition: opacity .5s ease-out;
+}
+.input-group>.form-control,
+.input-group>.form-floating,
+.input-group>.form-select  {
+    margin: 0 !important;
 }
