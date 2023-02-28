@@ -137,7 +137,7 @@ header {
 
 footer {margin-top: 50px;}
 @media (max-width: 575px) {
-    header {
+    footer {
         margin-top: 30px;
     }
 }
