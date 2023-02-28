@@ -1,24 +1,15 @@
 $(function () { 
     // switch between two donates methods
     $('#the_donta').trigger('click')
-    $('#the_donta').on('click', function() {
-        $('#donate-form').css('opacity', 0)
-        $('#visa-donate-now').attr('name', 'submit-egy')
-        $('#donate-form input').val('')
-        $('#donate-form select').val('')
-        setTimeout(() => {
-            $('#donate-form').css('opacity', 1)
-        }, 600);
-    })
-    $('#the_donta1').on('click', function() {
-        $('#donate-form').css('opacity', 0)
-        $('#visa-donate-now').attr('name', 'submit-dollar')
-        $('#donate-form input').val('')
-        $('#donate-form select').val('')
+    $('#location1').trigger('click')
 
-        setTimeout(() => {
-            $('#donate-form').css('opacity', 1)
-        }, 600);
+    $('#location1').on('click', function () {
+            $('.currency').text('بالجنيه')
+
+        })
+    $('#location2').on('click', function () {
+
+        $('.currency').text('بالدولار')
     })
 
     // switch cart methods 

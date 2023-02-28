@@ -118,32 +118,7 @@
             <h4 class="bahya-color mb-3">تبرع اونلاين</h4>
             <form name="donate-form" id="donate-form" method="post" onsubmit="return validateForm()" class="needs-validation">
                 <input type="hidden" id="the_order_id" name="order_id" value="0">
-        
-                <div class="form-row mb-3">
-                    <div class="row w-100" style="flex-wrap: nowrap;">
-                        <div class="col-12 col-md-6 donate-ways">
-                            <div class="custom-control custom-radio tgl-radio-tabs">
-                                <input type="radio" id="the_donta" name="the_donta" value="1" checked
-                                    class="custom-control-input not-change form-check-input tgl-radio-tab-child">
-                                <label class="custom-control-label" for="the_donta">
-                                    <i class='bx bx-pyramid'></i>
-                                    التبرع من داخل مصر بالجنيه
-                                </label>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6 donate-ways">
-                            <div class="custom-control custom-radio custom-control-inline">
-                                <input type="radio" id="the_donta1" value="2" name="the_donta"
-                                    class="custom-control-input form-check-input tgl-radio-tab-child">
-                                <label class="custom-control-label" for="the_donta1">
-                                    <i class='bx bx-globe'></i>
-                                    التبرع من خارج مصر بالدولار
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-        
+
                 <div class="form-row">
                     <div class="col-md-12 mb-1 w-100">
                         
@@ -208,10 +183,31 @@
                         <div class="input-group">
                             <i class='bx bx-money'></i>
                             <input type="number" name="price" placeholder="قيمة التبرع" class="form-control" aria-label="Text input with dropdown button" >
+                            <h6 class="currency" style="position: absolute; left: 50px; top: calc(50% + 5px); transform: translateY(-50%); z-index: 9999;">
+                                بالجنيه
+                            </h6>
                         </div>
                     </div>
                 </div>
-        
+                <div class="chek-buttons w-100 mb-4" style="margin-right: 20px;">
+                    <h5 class="mb-2">مكان التبرع</h5>
+                    <div style="display: flex; justify-content: start; gap: 20px;">
+                        <div class="form-check">
+                            <label class="form-check-label" for="location1">
+                                داخل مصر
+                            </label>
+                            <input class="form-check-input" type="radio" name="location" id="location1" value="1" checked>
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label" for="location2">
+                                خارج مصر
+                            </label>
+                            <input class="form-check-input" type="radio" name="location" id="location2" value="2">
+                        </div>
+                    </div>
+
+                </div>
+
                 <button class="btn btn-primary bahya-bg p-3 w-100 submitDonate" id="visa-donate-now" name="submit-egy"
                     type="submit">متابعة التبرع</button>
             </form>
