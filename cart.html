@@ -161,10 +161,10 @@
                     <thead>
                         <tr>
                             <th class="pr-2">رقم العملية</th>
-                            <th>اسم المتبرع</th>
-                            <th>رقم الهاتف</th>
+                            <th>الاسم</th>
+                            <th>الهاتف</th>
                             <th>جهة التبرع</th>
-                            <th colspan="2" style="padding-right: 0 !important;">قيمة التبرع بالجنيه</th>
+                            <th colspan="2" style="padding-right: 0 !important;">القيمة</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -212,7 +212,7 @@
                     <tbody>
                         <tr>
                             <td>عدد التبرعات</td>
-                            <td >1</td>
+                            <td id="quantity"></td>
                         </tr>
                         <tr>
                             <td colspan="2" class="text-center">
@@ -361,6 +361,8 @@
                         if (parseInt(arr[i].value))
                             tot += parseInt(Number(arr[i].value));
                     }
+
+                    document.getElementById('quantity').innerText = $('[name="donate_price"]').length
                     document.getElementById('total').value = tot
                 }
             },
