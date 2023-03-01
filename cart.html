@@ -370,8 +370,8 @@
                     $('.remove-donate').on('click', function (e) {
                         e.preventDefault()
                         $(this).parents('tr').fadeOut()
-                        document.getElementById('total').value -= $(this).parents('tr').find(
-                            'input[type="number"]').val()
+                        document.getElementById('total').value -= Number($(this).parents('tr').find(
+                            'input[type="number"]').val())
                         setTimeout(() => {
                             $(this).parents('tr').remove()
                         }, 200);
