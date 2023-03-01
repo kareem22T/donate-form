@@ -28,13 +28,6 @@ $(function () {
         $(this).siblings().removeClass('active')
         $('.donates').css('opacity', 0)
         setTimeout(() => {
-            if ($(this).hasClass('egy')) {
-                $('.donates thead tr th:last-child').text('قيمة التبرع بالجنيه ')
-            } else {
-                $('.donates thead tr th:last-child').text('قيمة التبرع بالدولار ')
-            }
-        }, 350);
-        setTimeout(() => {
             $('.donates').css('opacity', 1)
         }, 500);
     })
