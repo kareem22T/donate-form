@@ -12,7 +12,7 @@ html {
   scroll-behavior: smooth;
 }
 
-.container .cart form .total .banks .form-check, .container .cart form .total .banks span, .danger-msg {
+.container .cart form .total .banks .form-check, .container .cart form .total .banks span, .danger-msg, .thanks tbody tr ul li span {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -280,6 +280,60 @@ html {
 .danger-msg {
   flex-direction: column;
   gap: 15px;
+}
+
+.thanks thead th, .thanks thead td, .thanks tbody th, .thanks tbody td {
+  border: 1px solid gray;
+  padding: 10px;
+}
+.thanks tbody tr ul {
+  gap: 10px;
+}
+.thanks tbody tr ul li {
+  background-color: rgba(241, 240, 240, 0.444);
+  padding: 10px;
+  gap: 10px;
+}
+@media (max-width: 575.98px) {
+  .thanks tbody tr ul li {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+}
+.thanks tbody tr ul li span {
+  width: 100%;
+  height: 100%;
+}
+@media (max-width: 575.98px) {
+  .thanks tbody tr ul li span {
+    background-color: white;
+    padding: 5px;
+  }
+}
+.thanks tbody tr ul li span.mobile {
+  display: none;
+}
+@media (max-width: 575.98px) {
+  .thanks tbody tr ul li span.mobile {
+    display: block;
+  }
+}
+@media (max-width: 575.98px) {
+  .thanks tr.pc {
+    display: none;
+  }
+}
+.thanks tr ul {
+  list-style: none;
+  display: grid;
+  margin: 0;
+  padding: 0;
+  grid-template-columns: repeat(4, 1fr);
+}
+@media (max-width: 575.98px) {
+  .thanks tr ul {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 /*# sourceMappingURL=custome.css.map */
