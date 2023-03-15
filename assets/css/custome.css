@@ -260,7 +260,9 @@ html {
   margin-top: 0;
 }
 .container .cart form .total .banks span img {
-  height: 20px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
   margin-left: 10px;
 }
 .container .cart form .total .banks span label {
