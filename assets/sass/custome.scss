@@ -360,3 +360,38 @@ html {
         }
     }
 }
+
+.donates td:not(.number),
+.donates th {
+    padding-right: 10px !important;
+}
+
+.donates th,
+.donates td {
+    text-align: center !important;
+}
+
+.number>div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 555px) {
+    .number>div {
+        flex-wrap: wrap;
+    }
+
+    .number input {
+        transform: none !important;
+    }
+}
+
+.cart form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* .number a {transform: translateX(calc(-50% + 15px));} */
