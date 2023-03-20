@@ -224,19 +224,13 @@ html {
                 }
 
                 .banks {
-                    display: grid;
-                    grid-template-columns: repeat(4, 1fr);
+                    display: flex;
                     gap: clamp(0.3125rem, calc(0.0638rem + 1.0753vw), 0.9375rem);
                     margin: 15px 0;
-                    justify-content: space-between;
-                    @media (max-width: 1399.98px) {
-                        grid-template-columns: repeat(3, 1fr);
-                    }
-                    @media (max-width: 992.98px) {
-                        grid-template-columns: repeat(2, 1fr);
-                    }
+                    justify-content: center;
+                    align-items: center;
                     @media (max-width: 767.98px) {
-                        grid-template-columns: repeat(1, 1fr);
+                        flex-direction: column;
                     }
                     .form-check {
                         @extend %flex-center;
@@ -262,7 +256,7 @@ html {
                             margin-top: 0;
                         }
                         img {
-                            height: 25px;
+                            height: clamp(1.5625rem, calc(1.2847rem + 1.1111vw), 2.1875rem);
                             object-fit: contain;
                             margin-left: 10px;
                         }
@@ -281,6 +275,7 @@ html {
                             width: 100%;
                             display: flex;
                             justify-content: space-between;
+                            align-items: center;
                         }
                     }
                 }
